@@ -1,0 +1,12 @@
+{
+  "users": [],
+  "products": [
+    { "id": "prd-1", "name": "Farm Fresh Spinach", "category": "Vegetables", "unit": "bunch", "priceKes": 60, "stock": 120 },
+    { "id": "prd-2", "name": "Sweet Bananas", "category": "Fruits", "unit": "kg", "priceKes": 140, "stock": 80 },
+    { "id": "prd-3", "name": "Organic Maize Flour", "category": "Cereals", "unit": "2kg pack", "priceKes": 240, "stock": 200 },
+    { "id": "prd-4", "name": "Premium Rice", "category": "Cereals", "unit": "2kg pack", "priceKes": 320, "stock": 150 },
+    { "id": "prd-5", "name": "Fresh Carrots", "category": "Vegetables", "unit": "kg", "priceKes": 110, "stock": 95 },
+    { "id": "prd-6", "name": "Sukuma Wiki", "category": "Vegetables", "unit": "bunch", "priceKes": 35, "stock": 250 }
+  ],
+  "orders": []
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresher | Fresh Foods & Cereals</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Fresher</h1>
+      <p>Fresh foods and cereals delivered across Kenya.</p>
+    </header>
+
+    <main>
+      <section class="card" id="catalog-section">
+        <h2>Catalog</h2>
+        <div id="catalog" class="grid"></div>
+      </section>
+
+      <section class="card auth-grid">
+        <div>
+          <h2>Register</h2>
+          <form id="register-form">
+            <input name="fullName" placeholder="Full name" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <input name="phone" placeholder="Phone (0712345678)" required />
+            <input name="password" type="password" placeholder="Password" required minlength="6" />
+            <button type="submit">Create account</button>
+          </form>
+        </div>
+
+        <div>
+          <h2>Login</h2>
+          <form id="login-form">
+            <input name="emailOrPhone" placeholder="Email or +2547..." required />
+            <input name="password" type="password" placeholder="Password" required />
+            <button type="submit">Login</button>
+          </form>
+          <p id="session-info">You are not logged in.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Order basket</h2>
+        <form id="order-form">
+          <div id="order-lines"></div>
+          <button type="submit">Place order</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>My Orders</h2>
+        <ul id="orders-list"></ul>
+      </section>
+    </main>
+
+    <p id="message"></p>
+
+    <script src="app.js"></script>
+  </body>
+</html>
