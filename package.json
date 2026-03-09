@@ -1,0 +1,10 @@
+{
+  "name": "fresher",
+  "version": "1.0.0",
+  "description": "Fresher - online fresh food and cereals ordering platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
