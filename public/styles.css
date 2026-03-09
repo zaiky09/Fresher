@@ -1,0 +1,90 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #f5f7f4;
+  color: #1f2a1f;
+}
+
+body {
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  max-width: 980px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  margin-bottom: 0.2rem;
+  font-size: 2.1rem;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e9df;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 2px 14px rgba(38, 70, 38, 0.05);
+}
+
+.grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.product {
+  border: 1px solid #e4ece2;
+  border-radius: 10px;
+  padding: 0.6rem;
+  background: #fcfdfb;
+}
+
+.auth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+form {
+  display: grid;
+  gap: 0.6rem;
+}
+
+input, button {
+  border-radius: 8px;
+  border: 1px solid #c7d4c2;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.95rem;
+}
+
+button {
+  background: #195f34;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover { background: #124727; }
+
+#message {
+  text-align: center;
+  font-weight: 600;
+}
+
+.order-line {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  gap: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+ul { padding-left: 1rem; }
