@@ -9,6 +9,12 @@ const { ensureStore, readStore, writeStore, createOrderId } = require('./src/sto
 const storeFile = ensureStore(dataPath);
 const publicDir = path.join(__dirname, 'public');
 
+function setCors(res) {
+  res.setHeader('Access-Control-Allow-Origin', process.env.CORS_ORIGIN || 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+}
+
 function hashPassword(password, salt = crypto.randomBytes(16).toString('hex')) {
   const digest = crypto.pbkdf2Sync(password, salt, 100000, 64, 'sha512').toString('hex');
   return `${salt}:${digest}`;
@@ -39,6 +45,7 @@ function verifyToken(token) {
 }
 
 function sendJson(res, statusCode, payload) {
+  setCors(res);
   res.writeHead(statusCode, { 'Content-Type': 'application/json' });
   res.end(JSON.stringify(payload));
 }
@@ -84,6 +91,12 @@ function serveStatic(req, res) {
 
 const server = http.createServer(async (req, res) => {
   try {
+    setCors(res);
+    if (req.method === 'OPTIONS') {
+      res.writeHead(204);
+      res.end();
+      return;
+    }
     if (req.method === 'GET' && req.url === '/api/catalog') {
       const store = readStore(storeFile);
       return sendJson(res, 200, { products: store.products });
